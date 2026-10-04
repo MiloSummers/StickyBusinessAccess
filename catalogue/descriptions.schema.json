@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sticky Business Access description catalogue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "locale", "entries"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "locale": {"type": "string", "minLength": 1},
+    "entries": {
+      "type": "object",
+      "propertyNames": {"minLength": 1},
+      "additionalProperties": {"$ref": "#/$defs/entry"}
+    }
+  },
+  "$defs": {
+    "description": {
+      "type": "object", "additionalProperties": false,
+      "required": ["shortName"],
+      "properties": {
+        "shortName": {"type": "string", "minLength": 1, "maxLength": 160},
+        "description": {"type": "string", "maxLength": 4000}
+      }
+    },
+    "entry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["shortName"],
+      "properties": {
+        "shortName": {"type": "string", "minLength": 1, "maxLength": 160},
+        "description": {"type": "string", "maxLength": 4000},
+        "variants": {"type": "object", "propertyNames": {"minLength": 1}, "additionalProperties": {"$ref": "#/$defs/description"}}
+      }
+    }
+  }
+}
