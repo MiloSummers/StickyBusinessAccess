@@ -6,6 +6,8 @@ Sticky Business is a cosy sticker-shop game. Combine artwork into designs, arran
 
 You must own and install the game separately; the base game is not included. See the [official Sticky Business Steam store page](https://store.steampowered.com/app/2303350/Sticky_Business/).
 
+Download the ready-to-install mod from [GitHub Releases](https://github.com/MiloSummers/StickyBusinessAccess/releases). Choose **StickyBusinessAccess-0.8.2-prism.zip**, extract it completely, and run **Setup.bat**. GitHub’s automatic source-code downloads are for developers and do not contain the player installation bundle.
+
 ## Accessibility Features
 
 - Prism announcements for focus, screen changes, actions, contextual help, and information. Repeat announcements or list current controls, including unavailable controls.
@@ -210,7 +212,7 @@ This describes development, not certification of every release, screen, or DLC. 
 
 Report problems, confusing announcements, missing information, and suggestions through the project's **GitHub Issues** when using its published repository, or contact **milosummers** on Discord.
 
-This checkout has no GitHub remote, so no verified repository or Issues URL is available. Use the repository you obtained the project from; direct links can be added when its actual publication URL is known.
+Repository: [MiloSummers/StickyBusinessAccess](https://github.com/MiloSummers/StickyBusinessAccess). Report bugs through [GitHub Issues](https://github.com/MiloSummers/StickyBusinessAccess/issues).
 
 Please include:
 
