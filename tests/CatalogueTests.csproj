@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><Compile Include="../src/DescriptionCatalogue.cs" Link="DescriptionCatalogue.cs"/><Compile Include="../src/NavigationRules.cs" Link="NavigationRules.cs"/><Compile Include="../src/TextEditFeedback.cs" Link="TextEditFeedback.cs"/></ItemGroup>
+  <ItemGroup><Compile Include="../src/DayLengthRules.cs" Link="DayLengthRules.cs"/></ItemGroup>
+  <ItemGroup><Compile Include="../src/SpeechService.cs" Link="SpeechService.cs"/><Compile Include="../src/PrismSpeechBackend.cs" Link="PrismSpeechBackend.cs"/></ItemGroup>
+</Project>
+
