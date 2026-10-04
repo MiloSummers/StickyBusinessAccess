@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework><LangVersion>latest</LangVersion><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>StickyBusinessAccess</AssemblyName><Version>0.8.2</Version><EnableNETAnalyzers>false</EnableNETAnalyzers>
+    <LoaderDir Condition="'$(LoaderDir)'==''">$(MSBuildThisFileDirectory)..\..\..\work\loader</LoaderDir>
+    <InteropDir Condition="'$(InteropDir)'==''">$(MSBuildThisFileDirectory)..\..\..\work\interop</InteropDir>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(SmokeSource)'!=''">
+    <Compile Include="$(SmokeSource)" Link="Private/MenuSmoke.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx.Core"><HintPath>$(LoaderDir)\BepInEx\core\BepInEx.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP"><HintPath>$(LoaderDir)\BepInEx\core\BepInEx.Unity.IL2CPP.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(LoaderDir)\BepInEx\core\Il2CppInterop.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(LoaderDir)\BepInEx\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="$(InteropDir)\*.dll" Exclude="$(InteropDir)\Il2CppDummyDll.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>
+
