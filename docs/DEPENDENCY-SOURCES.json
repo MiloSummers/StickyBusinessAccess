@@ -1,0 +1,199 @@
+{
+  "components": [
+    {
+      "component": "BepInEx",
+      "source": "https://github.com/BepInEx/BepInEx/tree/5b766a3b7f6c164d4798924a93f3acf4db769d06",
+      "sourceArchive": "https://codeload.github.com/BepInEx/BepInEx/zip/5b766a3b7f6c164d4798924a93f3acf4db769d06",
+      "archiveSha256": "ccea1256ef0552f51be640bf5e38f45667d3f95d609ea95ce386338a952993d0",
+      "notices": [
+        "licenses\\BepInEx-LICENSE"
+      ]
+    },
+    {
+      "component": "Il2CppInterop",
+      "source": "https://github.com/BepInEx/Il2CppInterop/tree/dbda1cb353b0f4253345dc45136d170b9e50a5a0",
+      "sourceArchive": "https://codeload.github.com/BepInEx/Il2CppInterop/zip/dbda1cb353b0f4253345dc45136d170b9e50a5a0",
+      "archiveSha256": "96d223a475c885ef08118a3adaee0c2ed5d65edd83fbea9987e5a305f1123ac5",
+      "notices": [
+        "licenses\\Il2CppInterop-LICENSE"
+      ]
+    },
+    {
+      "component": "Cpp2IL",
+      "source": "https://github.com/SamboyCoding/Cpp2IL/tree/558ddd98642010897d54316b51fbaa7889fda093",
+      "sourceArchive": "https://codeload.github.com/SamboyCoding/Cpp2IL/zip/558ddd98642010897d54316b51fbaa7889fda093",
+      "archiveSha256": "18c6bb900a52a8623b90ef6b382afde9986b79cc3ef2ce4e924df19cc1174d76",
+      "notices": [
+        "licenses\\Cpp2IL-LICENSE"
+      ]
+    },
+    {
+      "component": "Disarm",
+      "source": "https://github.com/SamboyCoding/Disarm/tree/8574010015c8c56bb7faad7e407c50b0abe9cc72",
+      "sourceArchive": "https://codeload.github.com/SamboyCoding/Disarm/zip/8574010015c8c56bb7faad7e407c50b0abe9cc72",
+      "archiveSha256": "9e36d2b36a64c60a1f633b396ac1ebb8d3469dae78a4b83bda799ec74216d4cb",
+      "notices": [
+        "licenses\\Disarm-LICENSE"
+      ]
+    },
+    {
+      "component": "AsmResolver",
+      "source": "https://github.com/Washi1337/AsmResolver/tree/124e161a9bc0ebb83b4d97276ae3da3c9cfe2fc5",
+      "sourceArchive": "https://codeload.github.com/Washi1337/AsmResolver/zip/124e161a9bc0ebb83b4d97276ae3da3c9cfe2fc5",
+      "archiveSha256": "c23829bbdb394d2b0d24d5d1b1cf0a09c5aa58f5b4211b081c941a2372dc03a6",
+      "notices": [
+        "licenses\\AsmResolver-LICENSE.md"
+      ]
+    },
+    {
+      "component": "AssetRipper-CIL",
+      "sourceArchive": "https://codeload.github.com/AssetRipper/AssetRipper.CIL/zip/06216e69825ccd6536dc17e9ca81c4d539ce9321",
+      "source": "https://github.com/AssetRipper/AssetRipper.CIL/tree/06216e69825ccd6536dc17e9ca81c4d539ce9321",
+      "notices": [
+        "licenses/AssetRipper-CIL-LICENSE"
+      ]
+    },
+    {
+      "component": "AssetRipper-Primitives",
+      "sourceArchive": "https://codeload.github.com/AssetRipper/AssetRipper.Primitives/zip/d759b3db98bf2a1cb8c2181faf5d405610aac585",
+      "source": "https://github.com/AssetRipper/AssetRipper.Primitives/tree/d759b3db98bf2a1cb8c2181faf5d405610aac585",
+      "notices": [
+        "licenses/AssetRipper-Primitives-LICENSE"
+      ]
+    },
+    {
+      "component": "HarmonyX",
+      "source": "https://github.com/BepInEx/HarmonyX/tree/v2.10.2",
+      "sourceArchive": "https://codeload.github.com/BepInEx/HarmonyX/zip/v2.10.2",
+      "archiveSha256": "0ace0f544db7bf77d002b23e0e40f9ceac79e2992b7673fb6d7290ec6870e724",
+      "notices": [
+        "licenses\\HarmonyX-LICENSE"
+      ]
+    },
+    {
+      "component": "Mono-Cecil",
+      "source": "https://github.com/jbevain/cecil/tree/0.11.4",
+      "sourceArchive": "https://codeload.github.com/jbevain/cecil/zip/0.11.4",
+      "archiveSha256": "9975bb71201fa4168e4a735cd1b3eef04852c8e71f2a37b360cc071d63005be3",
+      "notices": [
+        "licenses\\Mono-Cecil-LICENSE.txt",
+        "licenses\\Mono-Cecil-symbols_pdb_Microsoft.Cci.Pdb_LICENSE"
+      ]
+    },
+    {
+      "component": "MonoMod",
+      "source": "https://github.com/MonoMod/MonoMod/tree/v22.07.31.01",
+      "sourceArchive": "https://codeload.github.com/MonoMod/MonoMod/zip/v22.07.31.01",
+      "archiveSha256": "289fe022470e0733cbb4c8f61f510322ffea136f9313ea6f169def3c89211f8e",
+      "notices": [
+        "licenses\\MonoMod-LICENSE"
+      ]
+    },
+    {
+      "component": "MonoMod-Backports",
+      "source": "https://github.com/MonoMod/MonoMod/tree/a1b82852b",
+      "sourceArchive": "https://codeload.github.com/MonoMod/MonoMod/zip/a1b82852b",
+      "archiveSha256": "d956aaafa25e0d10af90e155bb9cb36c2a9c065d3c3ba3a3af020ecb59082a60",
+      "notices": [
+        "licenses\\MonoMod-Backports-LICENSE"
+      ]
+    },
+    {
+      "component": "Iced",
+      "source": "https://github.com/icedland/iced/tree/601c40570d6c986c8e1a6a2e483dd2fdf5ade552",
+      "sourceArchive": "https://codeload.github.com/icedland/iced/zip/601c40570d6c986c8e1a6a2e483dd2fdf5ade552",
+      "archiveSha256": "49fbf2fe9811e0fc20cd4a51812649e7987d4086e19940a0085dcf33a37badde",
+      "notices": [
+        "licenses\\Iced-LICENSE.txt",
+        "licenses\\Iced-src_rust_iced-x86-py_LICENSE.txt"
+      ]
+    },
+    {
+      "component": "Capstone-NET",
+      "source": "https://github.com/9ee1/Capstone.NET/tree/b90e380c14e857865c94a355954236e678bd557c",
+      "sourceArchive": "https://codeload.github.com/9ee1/Capstone.NET/zip/b90e380c14e857865c94a355954236e678bd557c",
+      "archiveSha256": "a2ab40b30d0fdff4b50e4ccd01143bb5fe41fa82bbe62ee555cdafd34a2aab70",
+      "notices": [
+        "licenses\\Capstone-NET-Gee.External.Capstone_runtimes_LICENSE.TXT",
+        "licenses\\Capstone-NET-LICENSE"
+      ]
+    },
+    {
+      "component": "dotnet-runtime",
+      "source": "https://github.com/dotnet/runtime/tree/0ec02c8c96e2eda06dc5b5edfdbdba0f36415082",
+      "sourceArchive": "https://codeload.github.com/dotnet/runtime/zip/0ec02c8c96e2eda06dc5b5edfdbdba0f36415082",
+      "archiveSha256": "05e5ea3465b8f53288e4768c94c9de3bc864731686effb11b63ec6e1970d1fab",
+      "notices": [
+        "licenses\\dotnet-runtime-LICENSE.TXT",
+        "licenses\\dotnet-runtime-THIRD-PARTY-NOTICES.TXT",
+        "licenses\\dotnet-runtime-src_coreclr_pal_src_libunwind_COPYING",
+        "licenses\\dotnet-runtime-src_coreclr_pal_src_libunwind_LICENSE",
+        "licenses\\dotnet-runtime-src_installer_pkg_THIRD-PARTY-NOTICES.TXT",
+        "licenses\\dotnet-runtime-src_mono_mono_mini_THIRD-PARTY-NOTICES.TXT",
+        "licenses\\dotnet-runtime-src_tests_JIT_Performance_CodeQuality_BenchmarksGame_LICENSE.TXT",
+        "licenses\\dotnet-runtime-src_tests_sizeondisk_sodbench_THIRD-PARTY-NOTICES.TXT"
+      ]
+    },
+    {
+      "component": "Doorstop",
+      "source": "https://github.com/NeighTools/UnityDoorstop/tree/v4.5.0",
+      "sourceArchive": "https://codeload.github.com/NeighTools/UnityDoorstop/zip/refs/tags/v4.5.0",
+      "archiveSha256": "7f0c963104aa08bf5fefef8ff85e7fecd8306838f5af3101487d9db4e9188d63",
+      "notices": [
+        "licenses/Doorstop-LICENSE"
+      ]
+    },
+    {
+      "component": "Dobby",
+      "source": "https://github.com/jmpews/Dobby/tree/master",
+      "sourceArchive": "https://codeload.github.com/jmpews/Dobby/zip/master",
+      "archiveSha256": "258ea361bf4accbe8aa98146e08e2a0aaeeae90421eb17fc2614b8d84075198c",
+      "notices": [
+        "licenses\\Dobby-LICENSE"
+      ]
+    },
+    {
+      "component": "SemanticVersioning",
+      "sourceArchive": "https://codeload.github.com/adamreeve/semver.net/zip/master",
+      "source": "https://github.com/adamreeve/semver.net",
+      "notices": [
+        "licenses/SemanticVersioning-LICENSE"
+      ]
+    }
+  ],
+  "distributionSources": [
+    {
+      "url": "https://codeload.github.com/BepInEx/BepInEx/zip/5b766a3b7f6c164d4798924a93f3acf4db769d06",
+      "file": "BepInEx-5b766a3b7f6c.zip",
+      "sha256": "CCEA1256EF0552F51BE640BF5E38F45667D3F95D609EA95CE386338A952993D0"
+    },
+    {
+      "url": "https://codeload.github.com/BepInEx/Il2CppInterop/zip/dbda1cb353b0f4253345dc45136d170b9e50a5a0",
+      "file": "Il2CppInterop-dbda1cb353b0.zip",
+      "sha256": "96D223A475C885EF08118A3ADAEE0C2ED5D65EDD83FBEA9987E5A305F1123AC5"
+    },
+    {
+      "url": "https://codeload.github.com/NeighTools/UnityDoorstop/zip/refs/tags/v4.5.0",
+      "file": "UnityDoorstop-v4.5.0.zip",
+      "sha256": "7F0C963104AA08BF5FEFEF8FF85E7FECD8306838F5AF3101487D9DB4E9188D63"
+    },
+    {
+      "url": "https://codeload.github.com/ethindp/prism/zip/refs/tags/v0.18.3",
+      "file": "Prism-v0.18.3.zip",
+      "sha256": "E930D023B8356319DEE9F4DA8DD8ACCA5C4B6C09CEE45E16DF95CCB6A67F4B9C"
+    }
+  ],
+  "prism": {
+    "version": "0.18.3",
+    "source": "https://github.com/ethindp/prism/tree/v0.18.3",
+    "archive": "https://github.com/ethindp/prism/releases/download/v0.18.3/prism-windows-x64.zip",
+    "archiveSha256": "13D3C9D1D524B0737CDE261C6468845753E36B6C5C2637E7D26BFB8BF4D8783F",
+    "dllSha256": "7C7D09C8C7306E8E1A0C46D603CCB2A391C194C77843400C11B746E7DD56A467",
+    "binaryPath": "dynamic/release/bin/prism.dll",
+    "license": "MPL-2.0",
+    "notices": [
+      "licenses/Prism-NOTICE",
+      "licenses/Prism"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "prismVersion": "0.18.3",
+  "machine": "x64",
+  "nativeImports": [
+    "ole32.dll",
+    "KERNEL32.dll",
+    "RPCRT4.dll",
+    "USER32.dll",
+    "OLEAUT32.dll",
+    "SHLWAPI.dll",
+    "XmlLite.dll",
+    "api-ms-win-core-winrt-l1-1-0.dll",
+    "UIAutomationCore.DLL",
+    "api-ms-win-power-base-l1-1-0.dll",
+    "ADVAPI32.dll",
+    "api-ms-win-core-synch-l1-2-0.dll",
+    "api-ms-win-core-winrt-error-l1-1-1.dll"
+  ],
+  "unchangedAccessibilitySourceFiles": [
+    "AccessBindings.cs",
+    "BindingUi.cs",
+    "CreatorAccess.cs",
+    "DayLength.cs",
+    "DayLengthRules.cs",
+    "DescriptionCatalogue.cs",
+    "GameUi.cs",
+    "GoodieAccess.cs",
+    "InformationAccess.cs",
+    "InventoryAccess.cs",
+    "NavigationRules.cs",
+    "PrintedAccess.cs",
+    "SaveAccess.cs",
+    "ScreenText.cs",
+    "TextEditFeedback.cs",
+    "UiModel.cs"
+  ],
+  "changedExistingCSharpSourceFiles": [
+    "MenuAccess.cs",
+    "Plugin.cs",
+    "Speech.cs"
+  ],
+  "announcementCallSites": {
+    "BindingUi.cs": 9,
+    "CreatorAccess.cs": 7,
+    "GameUi.cs": 2,
+    "GoodieAccess.cs": 7,
+    "InformationAccess.cs": 5,
+    "InventoryAccess.cs": 1,
+    "MenuAccess.cs": 54,
+    "PrintedAccess.cs": 9,
+    "SaveAccess.cs": 1,
+    "ScreenText.cs": 1
+  },
+  "totalAnnouncementCallSites": 96,
+  "directNvdaSpeechCalls": 0,
+  "manualPrismReaderTesting": false
+}

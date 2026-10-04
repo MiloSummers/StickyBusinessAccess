@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-04",
+  "version": "0.8.2",
+  "package": "0.8.2-prism",
+  "buildWarnings": 0,
+  "buildErrors": 0,
+  "passedChecks": {
+    "installer": 27,
+    "upgradeRollback": 10,
+    "existingLoader": 16,
+    "existingRegression": 32,
+    "speechRegression": 22
+  },
+  "releasePluginSha256": "90F2EE4EFAE150DD0B25B744F2901EA9953C4902EFAAE55B411AC2FD5779FC97",
+  "prismVersion": "0.18.3",
+  "prismDllSha256": "7C7D09C8C7306E8E1A0C46D603CCB2A391C194C77843400C11B746E7DD56A467",
+  "preservedAnnouncementCallSites": 96,
+  "humanAudiblePrismTestingPerformed": true,
+  "gameLaunchedDuringMigration": false,
+  "nativeVerification": "Official DLL loaded, bound symbols and reader registry checked without emitting speech; PE imports audited.",
+  "historicalPrePrismVerification": {
+    "date": "2026-10-03",
+    "version": "0.8.1",
+    "setupRevision": 1,
+    "buildWarnings": 0,
+    "buildErrors": 0,
+    "automatedChecksPassed": 32,
+    "releasePluginSha256": "61C3CF91665B896DA489261B229D1AD6A237CAA58F5B5DBA085C4CCA53152E80",
+    "inventorySourceUnchanged": true,
+    "privateFixtureTypesExcluded": true,
+    "runtimeChecks": "Isolated all-DLC native fixture: upgrade Tab to cards, Down within cards, F6 categories, Down within categories, native category activation, F7 cards, F9 Back; storefront F7 sticker actions, Down within sticker actions, Tab controls; customization F7 colours, Down within colours, Tab backgrounds, Down within backgrounds, Tab Back. No fixture or mod errors logged. Native purchase handler unchanged; actual spending not retested in this revision.",
+    "physicalKeyboardAndAudibleNVDARequireUserTesting": true,
+    "priorPackageAudit": "0.8.0 setup4 passed installer lifecycle and 16 shared-loader checks; this revision retains those installer mechanics with updated version metadata."
+  },
+  "subsequentHumanTest": {
+    "date": "2026-10-04",
+    "tester": "MiloSummers",
+    "reader": "NVDA",
+    "result": "User reported the latest build was running smoothly.",
+    "readerVersion": null,
+    "coverage": "Not individually itemized; no exhaustive coverage or other-reader testing claimed."
+  }
+}
