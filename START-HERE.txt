@@ -1,0 +1,29 @@
+Sticky Business Access 0.8.2 — simplified player package, revision 1
+
+1. Extract the entire ZIP with Windows Extract All.
+2. Close Sticky Business. Run Setup.bat to install or update.
+3. Start your supported screen reader, then launch the game through Steam.
+
+The support folder must stay beside Setup.bat. You do not need to open it
+or copy its files yourself. Initial loader preparation may take a few minutes
+and needs an internet connection.
+
+Tab / Shift+Tab switches sections in Creative Corner, sheet design, packing and shop screens.
+Arrows browse within a section. F6 categories, F7 items, F9 placed items.
+In upgrades: F6 categories, F7 items, F9 controls. In Customize: F7 colours, F9 backgrounds.
+Enter or Tab finishes positioning and returns to the same available choice.
+F1 gives contextual help. F2 repeats. F5 opens the information view.
+
+To remove the mod, close the game and run Uninstall.bat.
+Full controls and installation information: support/README.md.
+BepInEx help: support/docs/BEPINEX-TROUBLESHOOTING.md.
+
+The Class::Init “using a substitute” warning indicates a loader fallback.
+It has not prevented startup in the tested build. It remains in the log.
+A separate console is unnecessary; fresh installs keep it hidden. An old
+loader configuration may still enable it. See the BepInEx help document.
+
+If the game opens without speech, fully exit Steam, reopen Steam, then launch
+from its library with your supported screen reader running. Closing only Steam's window may not exit it.
+Your saves and inventory behavior are preserved by this update.
+
