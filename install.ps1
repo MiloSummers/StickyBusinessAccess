@@ -59,7 +59,7 @@ foreach($name in $originalNames){$originals+=@{path=$name;sha256=(Get-FileHash -
 $installed=@()
 $ownership='bundled'
 if($UseExistingLoader){$ownership='external'}
-$state=@{schemaVersion=1;gameDir=$GameDir;version='0.8.2';setupRevision=1;loaderOwnership=$ownership;originals=$originals;files=@();status='installing'}
+$state=@{schemaVersion=1;gameDir=$GameDir;version='0.8.2';setupRevision=2;loaderOwnership=$ownership;originals=$originals;files=@();status='installing'}
 $state|ConvertTo-Json -Depth 8|Set-Content -LiteralPath $receipt -Encoding UTF8
 try {
     foreach($file in $copy){

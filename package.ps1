@@ -35,12 +35,12 @@ New-Item -ItemType Directory -Path $plugin | Out-Null
 Copy-Item -LiteralPath "$PSScriptRoot\src\bin\Release\net6.0\StickyBusinessAccess.dll" -Destination $plugin
 Copy-Item -LiteralPath $PrismDll -Destination (Join-Path $plugin 'prism.dll')
 Copy-Item -LiteralPath "$PSScriptRoot\catalogue\descriptions.en.json" -Destination $plugin
-foreach($name in @('START-HERE.txt','Setup.bat','Uninstall.bat')){Copy-Item -LiteralPath (Join-Path $PSScriptRoot $name) -Destination $Destination}
+foreach($name in @('START-HERE.txt','PLAYER-INSTRUCTIONS.md','Setup.bat','Uninstall.bat')){Copy-Item -LiteralPath (Join-Path $PSScriptRoot $name) -Destination $Destination}
 foreach($name in @('README.md','setup.ps1','setup-common.ps1','update.ps1','install.ps1','uninstall.ps1','LICENSE','THIRD-PARTY.md')){Copy-Item -LiteralPath (Join-Path $PSScriptRoot $name) -Destination $support}
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'licenses') -Destination $support -Recurse
 $playerDocs=Join-Path $support 'docs'
 New-Item -ItemType Directory -Path $playerDocs | Out-Null
-foreach($name in @('ACCESSIBILITY-0.8.md','DEPENDENCY-SOURCES.json','RELEASE-VERIFICATION.json','RELEASE-AUDIT-0.8.md','BEPINEX-TROUBLESHOOTING.md','PRISM-MIGRATION.md','PRISM-SOURCE-AUDIT.json')){Copy-Item -LiteralPath (Join-Path $PSScriptRoot ('docs\'+$name)) -Destination $playerDocs}
+foreach($name in @('ACCESSIBILITY-0.8.md','DEPENDENCY-SOURCES.json','RELEASE-VERIFICATION.json','RELEASE-AUDIT-0.8.md','BEPINEX-TROUBLESHOOTING.md','PRISM-MIGRATION.md','PRISM-SOURCE-AUDIT.json','RELEASE-0.8.2-setup2.md')){Copy-Item -LiteralPath (Join-Path $PSScriptRoot ('docs\'+$name)) -Destination $playerDocs}
 $sourceFolder=Join-Path $support 'third-party-sources'
 New-Item -ItemType Directory -Path $sourceFolder | Out-Null
 foreach($name in $sourceArchives){Copy-Item -LiteralPath (Join-Path $PSScriptRoot ('third-party-sources\'+$name)) -Destination $sourceFolder}
@@ -51,5 +51,6 @@ $hashes | ConvertTo-Json -Depth 3 | Set-Content -LiteralPath (Join-Path $support
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 # Compress-Archive skips hidden files such as .doorstop_version on Windows.
 [IO.Compression.ZipFile]::CreateFromDirectory($Destination,$Destination+'.zip')
+& (Join-Path $PSScriptRoot 'verify-release.ps1') -Archive ($Destination+'.zip')
 Write-Host "Release created: $Destination.zip"
 

@@ -79,20 +79,40 @@ function Test-SetupLinks {
 function Test-SetupPayload {
     param([string]$Package)
     $payload=Join-Path $Package 'payload'
-    if(!(Test-Path -LiteralPath $payload)){throw 'The payload is missing. Extract the entire player release ZIP, then run Setup.bat.'}
-    $manifest=Get-Content -LiteralPath (Join-Path $Package 'payload-sha256.json') -Raw|ConvertFrom-Json
+    if(!(Test-Path -LiteralPath $payload -PathType Container)){
+        if(Test-Path -LiteralPath (Join-Path $Package 'src\StickyBusinessAccess.csproj')){
+            throw @"
+StickyBusinessAccess installation files are not present.
+
+It looks like you may have downloaded the source code instead of the player release.
+
+Go to https://github.com/MiloSummers/StickyBusinessAccess/releases/latest and download StickyBusinessAccess-0.8.2-setup2-player.zip from the Assets section.
+Do not use GitHub's 'Source code (zip)' or 'Source code (tar.gz)' downloads, or any archive labelled DEVELOPER-source or prism-source.
+
+Extract the entire player ZIP before running Setup.bat. Keep the support folder beside Setup.bat.
+
+Expected payload folder: $payload
+"@
+        }
+        throw "Incomplete player package: required payload folder missing: $payload. Download StickyBusinessAccess-0.8.2-setup2-player.zip again and extract the entire ZIP into a new folder. Keep support beside Setup.bat."
+    }
+    $manifestPath=Join-Path $Package 'payload-sha256.json'
+    if(!(Test-Path -LiteralPath $manifestPath -PathType Leaf)){throw "Broken player package: checksum manifest missing: $manifestPath. Extract a fresh player ZIP."}
+    try {$manifest=Get-Content -LiteralPath $manifestPath -Raw|ConvertFrom-Json}
+    catch {throw "Corrupt player package: checksum manifest could not be read: $manifestPath. Download the player ZIP again and extract it into a new folder."}
     $manifest=@($manifest)
     $files=@(Get-ChildItem -LiteralPath $payload -Recurse -File -Force)
-    if($manifest.Count -ne $files.Count){throw 'The release payload is incomplete or contains unexpected files. Extract a fresh release ZIP.'}
     $seen=@{}
     foreach($entry in $manifest){
         $path=Get-SafeSetupPath $payload $entry.path
         if($seen.ContainsKey($path)){throw 'Duplicate payload manifest entry.'}
         $seen[$path]=$true
-        if(!(Test-Path -LiteralPath $path -PathType Leaf) -or (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash -ne $entry.sha256){throw "Release checksum failed: $($entry.path). Extract a fresh release ZIP."}
+        if(!(Test-Path -LiteralPath $path -PathType Leaf)){throw "Incomplete player package: required payload file missing: $path. Extract a fresh player ZIP."}
+        if((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash -ne $entry.sha256){throw "Corrupt payload file (SHA256 mismatch): $path. Extract a fresh player ZIP."}
     }
+    if($manifest.Count -ne $files.Count){throw "Unexpected payload files under $payload. Expected $($manifest.Count); found $($files.Count). Extract into a new empty folder."}
     foreach($required in @('winhttp.dll','doorstop_config.ini','.doorstop_version','dotnet\coreclr.dll','BepInEx\core\BepInEx.Unity.IL2CPP.dll','BepInEx\plugins\StickyBusinessAccess\StickyBusinessAccess.dll','BepInEx\plugins\StickyBusinessAccess\prism.dll')){
-        if(!(Test-Path -LiteralPath (Join-Path $payload $required))){throw "Required dependency missing: $required"}
+        if(!(Test-Path -LiteralPath (Join-Path $payload $required))){throw "Required dependency missing: $(Join-Path $payload $required)"}
     }
     return $files
 }

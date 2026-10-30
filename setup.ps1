@@ -1,10 +1,13 @@
 param([string]$GameDir)
 $ErrorActionPreference='Stop'
 Set-StrictMode -Version Latest
+$payloadValidated=$false
 try {
     . (Join-Path $PSScriptRoot 'setup-common.ps1')
     Write-Host 'Sticky Access setup. Close Sticky Business before continuing.'
     Write-Host 'The required loader and runtime are included. No separate dependency download or configuration is needed.'
+    $null=Test-SetupPayload $PSScriptRoot
+    $payloadValidated=$true
     $GameDir=Resolve-StickyBusiness -GameDir $GameDir -Interactive
     Write-Host "Game folder: $GameDir"
     $receipt=Join-Path $GameDir 'StickyBusinessAccess-install.json'
@@ -39,7 +42,8 @@ try {
     Write-Host 'Keep an internet connection for the first launch. Initial setup may take several minutes.'
 } catch {
     Write-Host "Setup did not complete: $($_.Exception.Message)"
-    Write-Host 'Your original game files and saves have not been replaced by setup.'
+    if(!$payloadValidated){Write-Host 'No game files were changed.'}
+    else {Write-Host 'See the specific error above. If installation was interrupted, run Uninstall.bat before retrying.'}
     exit 1
 }
 

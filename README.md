@@ -1,12 +1,12 @@
 # Sticky Business Accessibility Mod
 
-Sticky Business Access is an unofficial accessibility mod for **Sticky Business**, designed for keyboard play with screen-reader speech through **Prism 0.18.3**. Current mod version: **0.8.2**. Current player package: **0.8.2-prism**, with the existing Setup.bat installation process.
+Sticky Business Access is an unofficial accessibility mod for **Sticky Business**, designed for keyboard play with screen-reader speech through **Prism 0.18.3**. Current mod version: **0.8.2**. Current player package: **0.8.2-setup2-player**, with the existing Setup.bat installation process.
 
 Sticky Business is a cosy sticker-shop game. Combine artwork into designs, arrange and print sticker sheets, receive customer orders, pack and send their stickers, and buy upgrades as customer stories progress.
 
 You must own and install the game separately; the base game is not included. See the [official Sticky Business Steam store page](https://store.steampowered.com/app/2303350/Sticky_Business/).
 
-Download the ready-to-install mod from [GitHub Releases](https://github.com/MiloSummers/StickyBusinessAccess/releases). Choose **StickyBusinessAccess-0.8.2-prism.zip**, extract it completely, and run **Setup.bat**. GitHub’s automatic source-code downloads are for developers and do not contain the player installation bundle.
+Download **StickyBusinessAccess-0.8.2-setup2-player.zip** from the **Assets** section of [GitHub Releases](https://github.com/MiloSummers/StickyBusinessAccess/releases/latest). **Do not select GitHub's “Source code (zip)” or “Source code (tar.gz)” downloads, or archives labelled DEVELOPER-source or prism-source.** GitHub automatically generates the two source-code downloads for tags; they cannot be removed as ordinary uploaded release assets. Extract the entire player ZIP with **Extract All**, close the game, open the extracted folder and run **Setup.bat**. See [player instructions](https://github.com/MiloSummers/StickyBusinessAccess/blob/main/PLAYER-INSTRUCTIONS.md) for screen-reader download and setup steps.
 
 ## Accessibility Features
 
@@ -103,7 +103,7 @@ The player ZIP opens to **Setup.bat**, **Uninstall.bat**, **START-HERE.txt**, an
 
 - Your own Steam installation on **64-bit Windows**.
 - A supported screen reader running for speech; Windows 10 or later.
-- The entire extracted **StickyBusinessAccess-0.8.2-prism.zip**, including scripts and payload.
+- The entire extracted **StickyBusinessAccess-0.8.2-setup2-player.zip**, including scripts and payload.
 - An internet connection for first-launch generation of Unity interop files.
 
 The player release bundles the exact required **BepInEx 6.0.0-be.788+5b766a3, Unity.IL2CPP win-x64**, Unity Doorstop 4.5.0, the loader's .NET runtime, and Prism 0.18.3 Windows x64 runtime. No separate BepInEx download, developer SDK, or configuration editing is needed. A source checkout is for development and is not an installer package.
@@ -244,3 +244,5 @@ Update this README when controls, major features, installation requirements, com
 
 Shop sections: upgrades use Categories, Items and Controls; the sticker storefront uses Stickers and Controls; Customize uses Colours, Backgrounds and Controls. F6 jumps to upgrade categories, F7 to items/stickers/colours, and F9 to shop controls or customization backgrounds. Empty sections are skipped. Arrow navigation and native purchases/selections are retained.
 
+
+The original v0.8.2 player ZIP is complete. Installer revision 2 addresses source/player download confusion and retains the 0.8.2 accessibility DLL unchanged. Missing-package diagnostics report the expected path and distinguish developer source downloads. The packaged ZIP is extracted and validated before distribution.
